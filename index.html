@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>National Final Coverage</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Top Section top bar with number, bottom bar tagtext and form -->
+    <header>
+        <div class="container">
+            <div class="row" style="background: #fff; padding-bottom:5px;">
+                <div class="col-6">
+                    <img src="assets/imgs/logo.png" class="img-responsive" id="logoImg" alt="National Final Coverage">
+                </div>
+                <div class="col-6">
+                    <button class="btn float-right" id="callBtnTop">
+                        <i class="fa fa-phone fa-fw"></i> 1-888-555-5555
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="topBarTxt">
+            <div class="col-12">
+                <h4 class="h4-responsive font-weight-bold mainTxt" id="sloganOne"> Protect Your Family’s Future with Final Expense Insurance</h4>
+            </div>
+        </div>
+        <!-- Full Page Intro -->
+        <div class="view">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient d-flex justify-content-center align-items-center"></div>
+            <!-- Content -->
+            <div class="container">
+
+                <!-- Left Side Text  -->
+                <div class="row pt-2">
+
+                    <!--Grid column-->
+                    <div class="col-md-6 white-text text-center text-md-left" style="margin: auto 0;">
+                        <div class="sloganTwo col-md-12">
+                             <h6 style="font-weight:bold;">Affordable Burial Insurance For Seniors.</h6>A burial insurance policy helps ease the financial burden placed on a family when a loved one dies. Burial insurance helps
+                            your loved ones pay for burial expenses and funeral services.
+
+                        </div>
+                    </div>
+                   <!--  Right Side form  -->
+                    <div class="col-md-6 mb-4 pt-2" >
+                        
+                        <!--Form-->
+                        <form class="card" id="form" data-toggle="validator" onSubmit="if(!confirm('ERROR OOPS! This is only a demo site. If you would like a quote please visit: nationalfinalcoverage.com')){return false;}">
+                            <div class="card-body">
+
+                                <!--Header of form-->
+                                <div class="text-center">
+                                    <h3 class="white-text">Get A FREE Quote Now!</h3>
+                                    <hr class="hr-light">
+                                </div>
+                                <!--Body of form-->
+                                <div class="row">
+
+                                <!-- First name form field-->
+                                <div class="md-form col-sm-6">
+                                    <input type="text" id="fName-form" class="white-text form-control" placeholder="First Name" required="required">
+                                </div>
+
+                                <!-- Last name form field-->
+                                <div class="md-form col-sm-6">
+                                    <input type="text" id="Lname-form" class="white-text form-control" placeholder="Last Name" required="required">
+                                </div>
+                                </div>
+
+                                <!-- Email form field-->
+                                <div class="md-form">
+                                    <input type="email" id="email-form" class="white-text form-control" placeholder="Email" data-error="Bruh, that email address is invalid"
+                                        required="required">
+                                </div>
+
+                                <!-- Phone form field-->
+                                <div class="md-form">
+                                    <input type="text" id="phone-form" class="white-text form-control" pattern="\d{3}[\-]\d{3}[\-]\d{4}" placeholder="Phone: 123-456-7890"
+                                        required="required">
+                                </div>
+
+                                <!-- Zip form field-->
+                                <div class="md-form">
+                                    <input type="text" id="zip-form" class="white-text form-control" pattern="^\d{5}(?:[-\s]\d{4})?$" placeholder="Zip"
+                                        required="required">
+                                </div>
+
+                                <!-- Date of birth form field-->
+                                <div class="md-form">
+                                    <div class="register-form-row-col">Date Of Birth :</div>
+                                    <div class="register-form">
+                                        <div class="row">
+                                            <div class="col-5" >
+                                                <select class="form-control dob-dropdwn" required id="month-form" name="month" onchange="call()">
+                                                    <option value="">Month</option>
+                                                    <option value="1">Jan</option>
+                                                    <option value="2">Feb</option>
+                                                    <option value="3">Mar</option>
+                                                    <option value="4">Apr</option>
+                                                    <option value="5">May</option>
+                                                    <option value="6">Jun</option>
+                                                    <option value="7">Jul</option>
+                                                    <option value="8">Aug</option>
+                                                    <option value="9">Sep</option>
+                                                    <option value="10">Oct</option>
+                                                    <option value="11">Nov</option>
+                                                    <option value="12">Dec</option>
+                                                </select>
+                                            </div>
+                                            <!-- Day : -->
+                                            <div class="col-3" style="padding:0" >
+                                                <select class="form-control dob-dropdwn" required id="day-form" name="day">
+                                                    <option value="">Day</option>
+                                                </select>
+                                            </div>
+                                            <!-- Year: -->
+                                            <div class="col-4" >
+                                                <select class="form-control dob-dropdwn" required id="year-form" name="year" onchange="call()">
+                                                    <option value="">Year</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>                           
+                                <div class="md-form">
+                                    <label id="coverage-form" style="margin-bottom:0;">Coverage Amount:</label>
+                                    <select class="form-control" required="required">
+                                        <option value="">Select</option>
+                                        <option value="$5,000">$5,000</option>
+                                        <option value="$10,000">$10,000</option>
+                                        <option value="$20,000">$20,000</option>
+                                        <option value="$30,000">$30,000</option>
+                                        <option value="$40,000">$40,000</option>
+                                        <option value="$50,000">$50,000</option>
+                                        <option value="$60,000 +">$60,000 + </option>
+                                    </select>
+                                </div>
+                                
+                                <div class="row" id="radioBtns">
+                                   
+                                    <div class="col-6">
+                                        <select class="form-control" required="required">
+                                            <option value="">Gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                        </select>
+                                    </div>
+                                    
+                                
+                                    <div class="col-6">
+                                        <select class="form-control" required="required">
+                                            <option value="">Smoker</option>
+                                            <option value="yes">Yes</option>
+                                            <option value="no">No</option>
+                                        </select>
+                                    </div>
+                                    
+                                </div>
+
+
+                                <div class="text-center">
+                                    <button class="btn" id="submitBtn" type="submit">GET QUOTES NOW!</button>
+                                    <div id="messages_content"></div>
+                                </div>
+                                <div class="md-form" style="font-size:10px">
+                                    <img src="assets/imgs/secure.png" alt="secure" style="display:block; margin-left: auto; margin-right: auto;margin-top:10px; margin-bottom: 10px">
+                                    <hr class="hr-light" style="margin:1px">
+                                    <p style="margin-bottom: 0;">
+                                        By clicking the "GET QUOTES NOW!" button, you agree to our Privacy Policy and authorize
+                                        National Final Coverage and its partners to contact you at the phone number you
+                                        entered using automated technology including auto-dialers, pre-recorded messages,
+                                        and text messages, even if your phone is a mobile number or is currently listed on
+                                        any state, federal, or corporate "Do Not Call" list, and you are not required to
+                                        give your consent as a condition of service.</p>
+            
+                                </div>
+                            </div>
+                        </form>
+                        <!--/. End of Form-->
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </div>
+            <!-- Content -->
+        </div>
+        <!-- Mask & flexbox options-->
+        <!-- Full Page Intro -->
+    </header>
+    <!-- END Top Section top bar with number, bottom bar tagtext and form -->
+    <main>
+        <!-- section two top -->
+        <div id="sectionTwo">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-12 text-center" id="bigTextArr">
+                        <i class="fas fa-arrow-circle-up"></i>Complete the Form &amp; Recieve a Free Quote!<i class="fas fa-arrow-circle-up"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="imgMobile">
+            <img src="assets/imgs/head-bg-m-sm.jpg" alt="Family Photo" style="width:100%">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="sloganTwoMobile">
+                        <div class="col-12">
+                            <h6 style="font-weight:bold;">Affordable Burial Insurance For Seniors.</h6>A burial insurance policy helps ease the financial burden placed on a family when a loved one dies. Burial insurance helps
+                            your loved ones pay for burial expenses and funeral services.
+                        </div>
+                    </div>
+                </div>
+            </div>      
+        </div>
+        <!-- section two bottom-->
+        <!-- GRAPH text and image Section -->
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-xl-6" id="sectionTxtGraph">
+                    <h5 style="color:#00558a; display:inline; background:yellow;">Burial life insurance can now be had for less than a cup of coffee, with rates starting at as little as 5.50 per month.</h5>
+                    <p style="font-size:16px;">
+                        Burial insurance is different than your typical life insurance policy, as life insurance doesn’t provide an immediate benefit, often taking months and much paperwork. Most people don’t have $10,000
+                        lying around at the time of a typically unplanned death of yourself or a loved one, so
+                        <a href="#"
+                            target="_blank" style="color:#1f90d6 !important; text-decoration:underline;">
+                            <strong>final expense insurance</strong>
+                        </a> is a great way to guarantee you are protected against costly medical bills and funeral expenses. These costs often
+                        create even more stress and grief to an already challenging situation. 
+                    </p>
+                </div>
+                <div class="col-xl-6" id="sectionGraph">
+                    <img src="assets/imgs/chart-1.jpg" class="img-responsive"  alt="Burial insurance cost graph" id="graphImg"/>
+                </div>
+            </div>
+        </div>
+        <!-- End GRAPH text and image Section -->
+
+        <!-- CTA button -->
+        <button type="button" onclick="scrollToTop(200)" class="btn hoverable ctaBtn" title="Get A Quote">Get A Quote</button>
+
+        <!-- section three top information bullets-->
+        <div id="sectionThree">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="row sloganInfo">
+                        <div class="col-md-12 text-center" id="bigText">
+                            <p>Facts are facts, but most people still wonder why they need final expense insurance.<br> Here are some key points as to the benefits
+                            of a typical Final Expense Policy.</p>
+                        </div>
+                        <div class="col-md-12 text-left" id="tableInfo">
+                            <table>
+                                <tr>
+                                    <th>
+                                        <i class="fa fa-info-circle fa-fw"></i>
+                                    </th>
+                                    <td>
+                                        Coverage options range from $2,500 – $100,000
+                                    </td>
+                                </tr>                               
+                                <tr>
+                                    <th>
+                                        <i class="fa fa-info-circle fa-fw"></i>
+                                    </th>
+                                    <td>
+                                        Payment is issued within 24-48 hours after a death
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <th>
+                                        <i class="fa fa-info-circle fa-fw"></i>
+                                    </th>
+                                    <td>
+                                        Family beneficiaries can typically use the money for any purpose
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <i class="fa fa-info-circle fa-fw"></i>
+                                    </th>
+                                    <td>
+                                        Best for senior consumers, but policies can be provided for those 25-80 years of age
+                                    </td>
+                                </tr>     
+                                <tr>
+                                    <th>
+                                        <i class="fa fa-info-circle fa-fw"></i>
+                                    </th>
+                                    <td>
+                                        Premiums are often for low double-digit monthly amounts and do not increase
+                                    </td>
+                                </tr>
+                            </table>           
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+        </div>
+        <!-- section three bottom-->
+        
+        <!-- section four top text with fam photo -->
+        <div id="sectionFour">
+            <div class="container">
+                <div class="row py-5">
+                    <div class="row" id="benefitInfo">
+                    <div class="col-lg-8" >  
+                            <h5 style=" display:inline; background:yellow;">The benefits are great, but does it make sense to take out a policy if I have term life insurance?</h5>
+                            <p>
+                                As you become a senior citizen, and your kids leave home, most people abandon their term life insurance policy. Term life policies are
+                                used to help a spouse or family member pay for a home, replace job income, pay for college and more in the event of an untimely
+                                death. Upon retirement age in your 50’s and 60’s, most of these big-ticket items have been paid for. At this point, you are
+                                left with no insurance coverage and must adapt to life on a smaller fixed income. Therefore, it makes financial sense to
+                                get even a small final expense insurance policy to cover the anticipated $9,000-$10,000 in funeral and other end of life
+                                type expenses down the road.
+                            </p>
+                           <!--8 column-->
+                    </div>
+                    <div class="col-lg-4" style="margin:auto;">
+                        <img src="assets/imgs/family.jpg" id="famPhoto" alt="Family Photo">
+                    </div>
+                </div>
+                <!--4 column-->
+                </div>
+            </div>
+        </div>
+         <!-- End Section Four -->
+
+        <!-- CTA button -->
+        <button type="button" onclick="scrollToTop(200)" class="btn hoverable ctaBtn" title="Get A Quote">Get A Quote</button>
+
+        <!-- Section Five Logo above footer -->
+        <div id="sectionFive">
+            <div class="container">
+                <div class="col-lg-12 text-center">
+                    <img class="img-responsive" id="footerLogo" alt="National Final Coverage Logo" src="assets/imgs/logo.png">
+                </div>
+            </div>
+        </div>
+        <!-- Blue line fade -->
+        <div class="lineFade"></div>
+
+        <!-- Footer Section -->
+        <footer>
+            <div class="container">
+                <div class="row py-5">
+                    <div class="col-lg-12 text-center" id="altLinks">
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Terms of Use</a> |
+                        <a href="#">Unsubscribe</a>
+                    </div>
+                    <div class="col-lg-12 text-center" id="copyRight">
+                        &copy; 2018
+                        <a href="http://nationalfinalcoverage.com"> nationalfinalcoverage.com</a> All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!--Main Layout-->
+
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+    <!-- Custom Js -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
